@@ -1,9 +1,6 @@
 node('built-in')
 {
-  environment {
-      dockerimage = ''
-      registry = 'andersonmbella/demoapp'
-  }
+  def app
     stage('ContinousDownload')
     {
     git 'https://github.com/EdgarLopezPhD/PaySim.git'
@@ -17,7 +14,7 @@ node('built-in')
     }
      stage('Build docker image') {
         script {
-            dockerimage = docker.build. appv
+            app = dockerimage = docker.build.("andersonmbella/myapp")
         }
     }
 }
