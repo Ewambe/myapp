@@ -17,7 +17,7 @@ node('built-in')
     }
      stage('Build docker image') {
         script {
-            dockerimage= docker.build.registry
+            dockerimage = docker.build. appv
         }
     }
 }
